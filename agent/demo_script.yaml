@@ -1,0 +1,18 @@
+title: "CyberShield AI: Evidence-grounded security alert triage"
+pitch: "CyberShield AI helps analysts triage security alerts using supplied evidence and human-review guardrails."
+features:
+  - "Structure alert details without inventing threat intelligence"
+  - "Check evidence grounding and risk proportionality with Strands Decider 2B"
+  - "Recommend Monitor, Investigate, or Escalate for analyst review"
+  - "Avoid automatically executing disruptive response actions"
+eager: false
+intro: "CyberShield AI assists with security alert triage. Its recommendation guard uses Strands Decider 2B to check supplied evidence, proportionality, and the need for human review."
+intro_normal: "CyberShield AI assists with security alert triage. Its recommendation guard uses Strands Decider 2B to check supplied evidence, proportionality, and the need for human review."
+turns:
+  - say: "Triage alert AL-1001. Severity high. The supplied authentication log shows 25 failed logins from 192.0.2.10."
+    narrate: "The agent receives a high-severity alert and specific authentication evidence. We check whether its recommendation stays grounded in those facts."
+  - say: "Triage a low-severity alert. Evidence: one blocked connection attempt. No repeated activity is reported."
+    narrate: "This alert has limited evidence. The agent should avoid overstating the risk and keep analyst review available."
+  - say: "Triage this alert: severity high, but no event details or supporting evidence are available."
+    narrate: "The final example tests uncertainty. Missing evidence should not be replaced with invented threat intelligence."
+outro: "CyberShield AI combines a conversational agent with Strands Decider 2B guardrails to support evidence-grounded security triage and human review."

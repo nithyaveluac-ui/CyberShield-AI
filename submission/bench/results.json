@@ -1,0 +1,641 @@
+{
+ "decider_model": "strands-decider-2b-hobson-v19",
+ "rows": [
+  {
+   "i": 0,
+   "expected": {
+    "evidence_grounded": "yes",
+    "risk_justified": "yes",
+    "human_review": "yes"
+   },
+   "decider": {
+    "evidence_grounded": {
+     "label": "yes",
+     "confidence": 0.8695
+    },
+    "risk_justified": {
+     "label": "yes",
+     "confidence": 0.864
+    },
+    "human_review": {
+     "label": "yes",
+     "confidence": 0.6783
+    }
+   },
+   "decider_ms": 3665.5997529996966,
+   "decider_server_ms": 2754.2,
+   "llm_error": "ValidationException: An error occurred (ValidationException) when calling the ConverseStream operation: Operation not allowed"
+  },
+  {
+   "i": 1,
+   "expected": {
+    "evidence_grounded": "yes",
+    "risk_justified": "yes",
+    "human_review": "yes"
+   },
+   "decider": {
+    "evidence_grounded": {
+     "label": "yes",
+     "confidence": 0.7218
+    },
+    "risk_justified": {
+     "label": "yes",
+     "confidence": 0.7996
+    },
+    "human_review": {
+     "label": "yes",
+     "confidence": 0.5526
+    }
+   },
+   "decider_ms": 3641.061804000856,
+   "decider_server_ms": 2820.9,
+   "llm_error": "ValidationException: An error occurred (ValidationException) when calling the ConverseStream operation: Operation not allowed"
+  },
+  {
+   "i": 2,
+   "expected": {
+    "evidence_grounded": "yes",
+    "risk_justified": "yes",
+    "human_review": "yes"
+   },
+   "decider": {
+    "evidence_grounded": {
+     "label": "yes",
+     "confidence": 0.824
+    },
+    "risk_justified": {
+     "label": "yes",
+     "confidence": 0.835
+    },
+    "human_review": {
+     "label": "no",
+     "confidence": 0.5627
+    }
+   },
+   "decider_ms": 3394.431393000559,
+   "decider_server_ms": 2676.7,
+   "llm_error": "ValidationException: An error occurred (ValidationException) when calling the ConverseStream operation: Operation not allowed"
+  },
+  {
+   "i": 3,
+   "expected": {
+    "evidence_grounded": "yes",
+    "risk_justified": "yes",
+    "human_review": "no"
+   },
+   "decider": {
+    "evidence_grounded": {
+     "label": "yes",
+     "confidence": 0.8083
+    },
+    "risk_justified": {
+     "label": "yes",
+     "confidence": 0.7547
+    },
+    "human_review": {
+     "label": "no",
+     "confidence": 0.9047
+    }
+   },
+   "decider_ms": 3746.159289001298,
+   "decider_server_ms": 2772.5,
+   "llm_error": "ValidationException: An error occurred (ValidationException) when calling the ConverseStream operation: Operation not allowed"
+  },
+  {
+   "i": 4,
+   "expected": {
+    "evidence_grounded": "yes",
+    "risk_justified": "yes",
+    "human_review": "yes"
+   },
+   "decider": {
+    "evidence_grounded": {
+     "label": "yes",
+     "confidence": 0.7988
+    },
+    "risk_justified": {
+     "label": "yes",
+     "confidence": 0.855
+    },
+    "human_review": {
+     "label": "yes",
+     "confidence": 0.9271
+    }
+   },
+   "decider_ms": 3458.562339999844,
+   "decider_server_ms": 2702.1,
+   "llm_error": "ValidationException: An error occurred (ValidationException) when calling the ConverseStream operation: Operation not allowed"
+  },
+  {
+   "i": 5,
+   "expected": {
+    "evidence_grounded": "yes",
+    "risk_justified": "yes",
+    "human_review": "yes"
+   },
+   "decider": {
+    "evidence_grounded": {
+     "label": "yes",
+     "confidence": 0.812
+    },
+    "risk_justified": {
+     "label": "yes",
+     "confidence": 0.8505
+    },
+    "human_review": {
+     "label": "no",
+     "confidence": 0.6554
+    }
+   },
+   "decider_ms": 3840.653381001175,
+   "decider_server_ms": 2795.5,
+   "llm_error": "ValidationException: An error occurred (ValidationException) when calling the ConverseStream operation: Operation not allowed"
+  },
+  {
+   "i": 6,
+   "expected": {
+    "evidence_grounded": "no",
+    "risk_justified": "no",
+    "human_review": "yes"
+   },
+   "decider": {
+    "evidence_grounded": {
+     "label": "yes",
+     "confidence": 0.5351
+    },
+    "risk_justified": {
+     "label": "no",
+     "confidence": 0.6191
+    },
+    "human_review": {
+     "label": "no",
+     "confidence": 0.6137
+    }
+   },
+   "decider_ms": 3645.4867720003676,
+   "decider_server_ms": 2737.9,
+   "llm_error": "ValidationException: An error occurred (ValidationException) when calling the ConverseStream operation: Operation not allowed"
+  },
+  {
+   "i": 7,
+   "expected": {
+    "evidence_grounded": "no",
+    "risk_justified": "no",
+    "human_review": "yes"
+   },
+   "decider": {
+    "evidence_grounded": {
+     "label": "no",
+     "confidence": 0.6151
+    },
+    "risk_justified": {
+     "label": "no",
+     "confidence": 0.5153
+    },
+    "human_review": {
+     "label": "yes",
+     "confidence": 0.6943
+    }
+   },
+   "decider_ms": 3521.441116999995,
+   "decider_server_ms": 2686.5,
+   "llm_error": "ValidationException: An error occurred (ValidationException) when calling the ConverseStream operation: Operation not allowed"
+  },
+  {
+   "i": 8,
+   "expected": {
+    "evidence_grounded": "yes",
+    "risk_justified": "yes",
+    "human_review": "yes"
+   },
+   "decider": {
+    "evidence_grounded": {
+     "label": "yes",
+     "confidence": 0.7318
+    },
+    "risk_justified": {
+     "label": "yes",
+     "confidence": 0.845
+    },
+    "human_review": {
+     "label": "yes",
+     "confidence": 0.8147
+    }
+   },
+   "decider_ms": 3827.965372998733,
+   "decider_server_ms": 3063.7,
+   "llm_error": "ValidationException: An error occurred (ValidationException) when calling the ConverseStream operation: Operation not allowed"
+  },
+  {
+   "i": 9,
+   "expected": {
+    "evidence_grounded": "yes",
+    "risk_justified": "yes",
+    "human_review": "no"
+   },
+   "decider": {
+    "evidence_grounded": {
+     "label": "yes",
+     "confidence": 0.8419
+    },
+    "risk_justified": {
+     "label": "yes",
+     "confidence": 0.8242
+    },
+    "human_review": {
+     "label": "no",
+     "confidence": 0.9082
+    }
+   },
+   "decider_ms": 3636.771684999985,
+   "decider_server_ms": 2932.6,
+   "llm_error": "ValidationException: An error occurred (ValidationException) when calling the ConverseStream operation: Operation not allowed"
+  },
+  {
+   "i": 10,
+   "expected": {
+    "evidence_grounded": "yes",
+    "risk_justified": "yes",
+    "human_review": "yes"
+   },
+   "decider": {
+    "evidence_grounded": {
+     "label": "yes",
+     "confidence": 0.5865
+    },
+    "risk_justified": {
+     "label": "yes",
+     "confidence": 0.7487
+    },
+    "human_review": {
+     "label": "yes",
+     "confidence": 0.7497
+    }
+   },
+   "decider_ms": 3645.749897999849,
+   "decider_server_ms": 2788.6,
+   "llm_error": "ValidationException: An error occurred (ValidationException) when calling the ConverseStream operation: Operation not allowed"
+  },
+  {
+   "i": 11,
+   "expected": {
+    "evidence_grounded": "yes",
+    "risk_justified": "yes",
+    "human_review": "yes"
+   },
+   "decider": {
+    "evidence_grounded": {
+     "label": "yes",
+     "confidence": 0.8916
+    },
+    "risk_justified": {
+     "label": "yes",
+     "confidence": 0.8911
+    },
+    "human_review": {
+     "label": "yes",
+     "confidence": 0.8155
+    }
+   },
+   "decider_ms": 6826.3087249997625,
+   "decider_server_ms": 5826.0,
+   "llm_error": "ValidationException: An error occurred (ValidationException) when calling the ConverseStream operation: Operation not allowed"
+  },
+  {
+   "i": 12,
+   "expected": {
+    "evidence_grounded": "yes",
+    "risk_justified": "yes",
+    "human_review": "yes"
+   },
+   "decider": {
+    "evidence_grounded": {
+     "label": "yes",
+     "confidence": 0.687
+    },
+    "risk_justified": {
+     "label": "yes",
+     "confidence": 0.7759
+    },
+    "human_review": {
+     "label": "yes",
+     "confidence": 0.8236
+    }
+   },
+   "decider_ms": 4443.421214999034,
+   "decider_server_ms": 3102.0,
+   "llm_error": "ValidationException: An error occurred (ValidationException) when calling the ConverseStream operation: Operation not allowed"
+  },
+  {
+   "i": 13,
+   "expected": {
+    "evidence_grounded": "yes",
+    "risk_justified": "yes",
+    "human_review": "no"
+   },
+   "decider": {
+    "evidence_grounded": {
+     "label": "yes",
+     "confidence": 0.8584
+    },
+    "risk_justified": {
+     "label": "yes",
+     "confidence": 0.818
+    },
+    "human_review": {
+     "label": "no",
+     "confidence": 0.915
+    }
+   },
+   "decider_ms": 3783.6548180002865,
+   "decider_server_ms": 3127.6,
+   "llm_error": "ValidationException: An error occurred (ValidationException) when calling the ConverseStream operation: Operation not allowed"
+  },
+  {
+   "i": 14,
+   "expected": {
+    "evidence_grounded": "yes",
+    "risk_justified": "yes",
+    "human_review": "no"
+   },
+   "decider": {
+    "evidence_grounded": {
+     "label": "yes",
+     "confidence": 0.8516
+    },
+    "risk_justified": {
+     "label": "yes",
+     "confidence": 0.7697
+    },
+    "human_review": {
+     "label": "no",
+     "confidence": 0.8751
+    }
+   },
+   "decider_ms": 3416.9789560000936,
+   "decider_server_ms": 2698.9,
+   "llm_error": "ValidationException: An error occurred (ValidationException) when calling the ConverseStream operation: Operation not allowed"
+  },
+  {
+   "i": 15,
+   "expected": {
+    "evidence_grounded": "yes",
+    "risk_justified": "yes",
+    "human_review": "yes"
+   },
+   "decider": {
+    "evidence_grounded": {
+     "label": "yes",
+     "confidence": 0.7429
+    },
+    "risk_justified": {
+     "label": "yes",
+     "confidence": 0.7899
+    },
+    "human_review": {
+     "label": "yes",
+     "confidence": 0.8734
+    }
+   },
+   "decider_ms": 3941.259203998925,
+   "decider_server_ms": 3106.9,
+   "llm_error": "ValidationException: An error occurred (ValidationException) when calling the ConverseStream operation: Operation not allowed"
+  },
+  {
+   "i": 16,
+   "expected": {
+    "evidence_grounded": "no",
+    "risk_justified": "no",
+    "human_review": "yes"
+   },
+   "decider": {
+    "evidence_grounded": {
+     "label": "no",
+     "confidence": 0.7014
+    },
+    "risk_justified": {
+     "label": "no",
+     "confidence": 0.6505
+    },
+    "human_review": {
+     "label": "yes",
+     "confidence": 0.5239
+    }
+   },
+   "decider_ms": 3465.927332999854,
+   "decider_server_ms": 2687.4,
+   "llm_error": "ValidationException: An error occurred (ValidationException) when calling the ConverseStream operation: Operation not allowed"
+  },
+  {
+   "i": 17,
+   "expected": {
+    "evidence_grounded": "yes",
+    "risk_justified": "yes",
+    "human_review": "yes"
+   },
+   "decider": {
+    "evidence_grounded": {
+     "label": "yes",
+     "confidence": 0.7141
+    },
+    "risk_justified": {
+     "label": "yes",
+     "confidence": 0.7912
+    },
+    "human_review": {
+     "label": "yes",
+     "confidence": 0.8589
+    }
+   },
+   "decider_ms": 3625.097722000646,
+   "decider_server_ms": 2850.6,
+   "llm_error": "ValidationException: An error occurred (ValidationException) when calling the ConverseStream operation: Operation not allowed"
+  },
+  {
+   "i": 18,
+   "expected": {
+    "evidence_grounded": "yes",
+    "risk_justified": "yes",
+    "human_review": "no"
+   },
+   "decider": {
+    "evidence_grounded": {
+     "label": "yes",
+     "confidence": 0.862
+    },
+    "risk_justified": {
+     "label": "yes",
+     "confidence": 0.8365
+    },
+    "human_review": {
+     "label": "no",
+     "confidence": 0.9085
+    }
+   },
+   "decider_ms": 3800.7900579996203,
+   "decider_server_ms": 3048.7,
+   "llm_error": "ValidationException: An error occurred (ValidationException) when calling the ConverseStream operation: Operation not allowed"
+  },
+  {
+   "i": 19,
+   "expected": {
+    "evidence_grounded": "yes",
+    "risk_justified": "yes",
+    "human_review": "yes"
+   },
+   "decider": {
+    "evidence_grounded": {
+     "label": "yes",
+     "confidence": 0.86
+    },
+    "risk_justified": {
+     "label": "yes",
+     "confidence": 0.8613
+    },
+    "human_review": {
+     "label": "yes",
+     "confidence": 0.8536
+    }
+   },
+   "decider_ms": 3639.296483999715,
+   "decider_server_ms": 2677.0,
+   "llm_error": "ValidationException: An error occurred (ValidationException) when calling the ConverseStream operation: Operation not allowed"
+  },
+  {
+   "i": 20,
+   "expected": {
+    "evidence_grounded": "yes",
+    "risk_justified": "yes",
+    "human_review": "yes"
+   },
+   "decider": {
+    "evidence_grounded": {
+     "label": "yes",
+     "confidence": 0.8269
+    },
+    "risk_justified": {
+     "label": "yes",
+     "confidence": 0.8494
+    },
+    "human_review": {
+     "label": "no",
+     "confidence": 0.6136
+    }
+   },
+   "decider_ms": 3606.5749539993703,
+   "decider_server_ms": 2760.0,
+   "llm_error": "ValidationException: An error occurred (ValidationException) when calling the ConverseStream operation: Operation not allowed"
+  },
+  {
+   "i": 21,
+   "expected": {
+    "evidence_grounded": "yes",
+    "risk_justified": "yes",
+    "human_review": "no"
+   },
+   "decider": {
+    "evidence_grounded": {
+     "label": "yes",
+     "confidence": 0.6794
+    },
+    "risk_justified": {
+     "label": "yes",
+     "confidence": 0.8109
+    },
+    "human_review": {
+     "label": "no",
+     "confidence": 0.7913
+    }
+   },
+   "decider_ms": 3631.2483359997714,
+   "decider_server_ms": 2800.6,
+   "llm_error": "ValidationException: An error occurred (ValidationException) when calling the ConverseStream operation: Operation not allowed"
+  },
+  {
+   "i": 22,
+   "expected": {
+    "evidence_grounded": "yes",
+    "risk_justified": "yes",
+    "human_review": "yes"
+   },
+   "decider": {
+    "evidence_grounded": {
+     "label": "no",
+     "confidence": 0.6359
+    },
+    "risk_justified": {
+     "label": "yes",
+     "confidence": 0.71
+    },
+    "human_review": {
+     "label": "yes",
+     "confidence": 0.9528
+    }
+   },
+   "decider_ms": 3594.0875979995326,
+   "decider_server_ms": 2794.5,
+   "llm_error": "ValidationException: An error occurred (ValidationException) when calling the ConverseStream operation: Operation not allowed"
+  },
+  {
+   "i": 23,
+   "expected": {
+    "evidence_grounded": "yes",
+    "risk_justified": "yes",
+    "human_review": "yes"
+   },
+   "decider": {
+    "evidence_grounded": {
+     "label": "yes",
+     "confidence": 0.6835
+    },
+    "risk_justified": {
+     "label": "yes",
+     "confidence": 0.8507
+    },
+    "human_review": {
+     "label": "yes",
+     "confidence": 0.6521
+    }
+   },
+   "decider_ms": 3489.884805998372,
+   "decider_server_ms": 2756.3,
+   "llm_error": "ValidationException: An error occurred (ValidationException) when calling the ConverseStream operation: Operation not allowed"
+  }
+ ],
+ "summary": {
+  "decider": {
+   "accuracy": 0.9167,
+   "decisions": 72,
+   "per_question": {
+    "evidence_grounded": 0.9167,
+    "risk_justified": 1.0,
+    "human_review": 0.8333
+   },
+   "latency_p50_ms": 3641.1,
+   "latency_p95_ms": 4443.4,
+   "usd_per_1k_decisions": 0.035,
+   "confident_share": 0.7361,
+   "accuracy_when_confident": 1.0,
+   "sent_to_human_at_threshold": 19
+  },
+  "llm": {
+   "accuracy": null,
+   "decisions": 0,
+   "per_question": {},
+   "latency_p50_ms": null,
+   "latency_p95_ms": null,
+   "usd_per_1k_decisions": 0.0,
+   "confident_share": null,
+   "accuracy_when_confident": null,
+   "sent_to_human_at_threshold": 0
+  }
+ },
+ "threshold": 0.7,
+ "llm_model": "us.amazon.nova-pro-v1:0",
+ "llm_provider": "bedrock",
+ "llm_where": "Amazon Bedrock (us.amazon.nova-pro-v1:0)",
+ "decider_url": "https://da25tnxy06gjk.cloudfront.net",
+ "decider_mode": "ugmdu",
+ "ran_at": 1792600423.2994514,
+ "split": "all"
+}

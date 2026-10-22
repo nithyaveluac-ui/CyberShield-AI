@@ -1,0 +1,99 @@
+{
+ "pattern_tag": "#guardrails",
+ "agentcore_features": [],
+ "pattern_doc": "REUSABLE DECISION PATTERN: Evidence-grounded security alert triage.\n\nPattern: #guardrails\nUse Strands Decider to check evidence grounding, proportional risk decisions,\nand whether a human analyst should review a proposed security recommendation.\nThe guard does not execute disruptive response actions.",
+ "questions_code": "QUESTIONS = {\n    \"evidence_grounded\": Decider.noul(\n        \"Is the proposed security alert recommendation supported by the supplied alert facts?\",\n        {\n            \"true\": \"The recommendation is supported by explicit alert fields or evidence.\",\n            \"false\": \"The recommendation assumes facts, threat intelligence, or activity not supplied.\",\n        },\n    ),\n    \"risk_justified\": Decider.noul(\n        \"Does the proposed triage decision match the severity and evidence actually provided?\",\n        {\n            \"true\": \"The decision is proportionate to the provided severity and evidence.\",\n            \"false\": \"The decision overstates or ignores the supplied evidence.\",\n        },\n    ),\n    \"human_review\": Decider.noul(\n        \"Should a human security analyst review this recommendation before relying on it?\",\n        {\n            \"true\": \"Evidence is missing, conflicting, uncertain, or the alert is high impact.\",\n            \"false\": \"Evidence is clear and sufficient for this non-disruptive recommendation.\",\n        },\n    ),\n}",
+ "agent_md": "# Use case\n\nOriginal project: CyberShield AI Security Alert Triage Agent.\n\n- **Pitch:** an AI-assisted security alert triage agent that grounds its recommendations in supplied evidence and routes uncertain cases for human review.\n- **Who it is for:** security analysts and teams that need consistent, evidence-based initial alert triage.\n- **Features:**\n  - structure supplied alert details without inventing threat intelligence;\n  - recommend Monitor, Investigate, or Escalate based on the provided facts;\n  - use Strands Decider 2B to check evidence grounding, risk proportionality, and human-review needs;\n  - record decisions for review without automatically performing disruptive security actions.\n- **The decision handed to Strands Decider 2B:** is the recommendation evidence-grounded, proportionate to the supplied risk, and appropriate for human review? (#guardrails)\n- **Why a decision model:** the guard needs explicit decision scores that application logic can use to allow, guide, or request confirmation for a proposed recommendation.\n- **Amazon Bedrock:** the conversational agent uses the configured Strands model provider. Deployment status must be verified separately.\n",
+ "llm_provider_local_runs": "bedrock",
+ "agent_name": "CyberShield AI Security Alert Triage Agent",
+ "bench": {
+  "summary": {
+   "decider": {
+    "accuracy": 0.7917,
+    "decisions": 24,
+    "per_question": {
+     "args_grounded": 0.9167,
+     "explicit_request": 0.6667
+    },
+    "latency_p50_ms": 294.8,
+    "latency_p95_ms": 467.6,
+    "usd_per_1k_decisions": 0.0,
+    "confident_share": 0.6667,
+    "accuracy_when_confident": 0.9375,
+    "sent_to_human_at_threshold": 8
+   },
+   "llm": {
+    "accuracy": 0.9583,
+    "decisions": 24,
+    "per_question": {
+     "args_grounded": 0.9167,
+     "explicit_request": 1.0
+    },
+    "latency_p50_ms": 1276.5,
+    "latency_p95_ms": 1426.1,
+    "usd_per_1k_decisions": 0.1785,
+    "confident_share": 1.0,
+    "accuracy_when_confident": 0.9583,
+    "sent_to_human_at_threshold": 0
+   },
+   "speedup_p50": 4.33
+  },
+  "decider_model": null,
+  "decider_mode": "local",
+  "llm_model": "us.amazon.nova-pro-v1:0",
+  "cases": 12,
+  "split": "all",
+  "threshold": 0.7
+ },
+ "bench_table": "| | Strands Decider 2B | us.amazon.nova-pro-v1:0 |\n|---|---|---|\n| Accuracy | 79.2% | 95.8% |\n| Latency p50 per decision | 295 ms | 1276 ms |\n| Latency p95 | 468 ms | 1426 ms |\n| Cost per 1,000 decisions | $0.0000 | $0.1785 |\n| Answered alone at confidence >= 0.7 | 67% | 100% |\n| Accuracy when confident | 93.8% | 95.8% |\n\nAt the median the decider was 4.3x faster than the LLM.\n",
+ "demo_turns": [
+  {
+   "user": "My headphones are broken, I want my money back.",
+   "reply": "Please provide the order ID for the headphones so I can process your refund.",
+   "decisions": [
+    {
+     "pattern": "#guardrails",
+     "tool": "refund_order",
+     "args": {
+      "amount": 249.0,
+      "order_id": "A1002"
+     },
+     "args_grounded": 0.437,
+     "explicit_request": 0.791,
+     "premature": 0.235,
+     "decider_ms": 3075,
+     "verdict": "guide"
+    }
+   ],
+   "latency_ms": 6970
+  },
+  {
+   "user": "It's order A1002, refund the full amount please.",
+   "reply": "Your refund for order A1002 has been processed. You will receive 249.0 back to your original payment method. If you have any further questions, feel free to ask.",
+   "decisions": [
+    {
+     "pattern": "#guardrails",
+     "tool": "refund_order",
+     "args": {
+      "amount": 249,
+      "order_id": "A1002"
+     },
+     "args_grounded": 0.608,
+     "explicit_request": 0.894,
+     "premature": 0.128,
+     "decider_ms": 3894,
+     "verdict": "proceed"
+    }
+   ],
+   "latency_ms": 5813
+  },
+  {
+   "user": "Is it possible to cancel an order after it ships?",
+   "reply": "Once an order has shipped, it cannot be cancelled. However, you can still request a refund after receiving the item. If you have any further questions, feel free to ask.",
+   "decisions": [],
+   "latency_ms": 940
+  }
+ ],
+ "repo_url": "https://github.com/nithyaveluac-ui/CyberShield-AI",
+ "video_url": ""
+}
